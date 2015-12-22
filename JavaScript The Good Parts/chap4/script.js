@@ -12,4 +12,18 @@ Quo.prototype.get_status = function() {
 var myQuo = new Quo("confused");
 document.writeln(myQuo.get_status());
 
-var quo;
+//汉诺塔
+var hanoi = function (disc, src, aux, dst) {
+    if (disc >0) {
+        hanoi(disc-1, src, dst, aux);
+        document.writeln('Move disc'+disc+' from '+src+' to '+dst+'<br>');
+        hanoi(disc-1, aux, src, dst);
+    }
+};
+
+hanoi(4, 'SRC', 'AUX', 'DST');
+
+//walk_the_DOM
+var walk_the_DOM = function walk (node, func) {
+    
+}
