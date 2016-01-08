@@ -40,27 +40,27 @@
 .anim-section.animating .anim-item.cloud-one { -webkit-animation: cloud-left 16s linear; -moz-animation: cloud-left 16s linear; animation: cloud-left 16s linear; }
 .anim-section.animating .anim-item.cloud-two { -webkit-animation: cloud-right 16s linear; -moz-animation: cloud-right 16s linear; animation: cloud-right 16s linear; }
 
-.anim-section.animating .anim-item.lang-globe { animation: zoom-globe 0.6s cubic-bezier(0.77, 0, 0.175, 1); }
-.anim-section.animating .anim-item.lang-light-inner { animation: zoom-globe 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.3s; }
-.anim-section.animating .anim-item.lang-light-outer { animation: zoom-globe 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.6s; }
-.anim-section.animating .anim-item.lang-ar { animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.5s; }
-.anim-section.animating .anim-item.lang-cn { animation: pin-show 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.1s; }
-.anim-section.animating .anim-item.lang-jp { animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.8s; }
+.anim-section.animating .anim-item.lang-globe { -webkit-animation: zoom-globe 0.6s cubic-bezier(0.77, 0, 0.175, 1); -moz-animation: zoom-globe 0.6s cubic-bezier(0.77, 0, 0.175, 1); animation: zoom-globe 0.6s cubic-bezier(0.77, 0, 0.175, 1); }
+.anim-section.animating .anim-item.lang-light-inner { -webkit-animation: zoom-globe 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.3s; -moz-animation: zoom-globe 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;animation: zoom-globe 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;}
+.anim-section.animating .anim-item.lang-light-outer { -webkit-animation: zoom-globe 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.6s; -moz-animation: zoom-globe 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.6s; animation: zoom-globe 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.6s; }
+.anim-section.animating .anim-item.lang-ar { -webkit-animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.5s; -moz-animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.5s; animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.5s; }
+.anim-section.animating .anim-item.lang-cn { -webkit-animation: pin-show 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.1s; -moz-animation: pin-show 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.1s; animation: pin-show 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.1s; }
+.anim-section.animating .anim-item.lang-jp { -webkit-animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.8s; -moz-animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.8s; animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.8s; }
 
 .anim-section.animating .anim-item.seo-browser { -webkit-animation: bg-show 0.6s forwards; -moz-animation: bg-show 0.6s forwards; animation: bg-show 0.6s forwards; }
-.anim-section.animating .anim-item.seo-gear-left { -webkit-animation: seo-gear 1s forwards 0.8s; }
-.anim-section.animating .anim-item.seo-gear-right { -webkit-animation: seo-gear 0.8s forwards 1.4s; }
-.anim-section.animating .anim-item.seo-shadow { -webkit-animation: opc-fade 1s forwards 1.8s; }
-.anim-section.animating .anim-item.seo-graphic-1 { -webkit-animation: paper-reverse 0.2s 2s; }
-.anim-section.animating .anim-item.seo-graphic-2 { -webkit-animation: paper-reverse 0.2s 2.2s; }
-.anim-section.animating .anim-item.seo-graphic-3 { -webkit-animation: paper-reverse 0.2s 2.4s; }
-.anim-section.animating .anim-item.seo-graphic-4 { -webkit-animation: paper-reverse 0.2s 2.6s; }
-.anim-section.animating .anim-item.seo-graphic-5 { -webkit-animation: paper-reverse 0.2s 2.8s; }
-.anim-section.animating .anim-item.seo-dot-1 { -webkit-animation: glass-show 0.2s 3s; }
-.anim-section.animating .anim-item.seo-dot-2 { -webkit-animation: glass-show 0.2s 3.2s; }
-.anim-section.animating .anim-item.seo-dot-3 { -webkit-animation: glass-show 0.2s 3.4s; }
-.anim-section.animating .anim-item.seo-seo { -webkit-animation: glass-show 0.2s 3.6s; }
-.anim-section.animating .anim-item.seo-glass { -webkit-animation: glass-show 1s forwards 3.8s; }
+.anim-section.animating .anim-item.seo-gear-left { -webkit-animation: seo-gear 1s forwards 0.8s; -moz-animation: seo-gear 1s forwards 0.8s; animation: seo-gear 1s forwards 0.8s;}
+.anim-section.animating .anim-item.seo-gear-right { -webkit-animation: seo-gear 0.8s forwards 1.4s; -moz-animation: seo-gear 0.8s forwards 1.4s; animation: seo-gear 0.8s forwards 1.4s; }
+.anim-section.animating .anim-item.seo-shadow { -webkit-animation: opc-fade 1s forwards 1.8s; -moz-animation: opc-fade 1s forwards 1.8s; animation: opc-fade 1s forwards 1.8s; }
+.anim-section.animating .anim-item.seo-graphic-1 { -webkit-animation: paper-reverse 0.2s 2s; -moz-animation: paper-reverse 0.2s 2s;  animation: paper-reverse 0.2s 2s; }
+.anim-section.animating .anim-item.seo-graphic-2 { -webkit-animation: paper-reverse 0.2s 2.2s; -moz-animation: paper-reverse 0.2s 2.2s; animation: paper-reverse 0.2s 2.2s; }
+.anim-section.animating .anim-item.seo-graphic-3 { -webkit-animation: paper-reverse 0.2s 2.4s; -moz-animation: paper-reverse 0.2s 2.4s; animation: paper-reverse 0.2s 2.4s; }
+.anim-section.animating .anim-item.seo-graphic-4 { -webkit-animation: paper-reverse 0.2s 2.6s; -moz-animation: paper-reverse 0.2s 2.6s; animation: paper-reverse 0.2s 2.6s; }
+.anim-section.animating .anim-item.seo-graphic-5 { -webkit-animation: paper-reverse 0.2s 2.8s; -moz-animation: paper-reverse 0.2s 2.8s; animation: paper-reverse 0.2s 2.8s; }
+.anim-section.animating .anim-item.seo-dot-1 { -webkit-animation: glass-show 0.2s 3s; -moz-animation: glass-show 0.2s 3s; animation: glass-show 0.2s 3s; }
+.anim-section.animating .anim-item.seo-dot-2 { -webkit-animation: glass-show 0.2s 3.2s; -moz-animation: glass-show 0.2s 3.2s; animation: glass-show 0.2s 3.2s; }
+.anim-section.animating .anim-item.seo-dot-3 { -webkit-animation: glass-show 0.2s 3.4s; -moz-animation: glass-show 0.2s 3.4s; animation: glass-show 0.2s 3.4s; }
+.anim-section.animating .anim-item.seo-seo { -webkit-animation: glass-show 0.2s 3.6s; -moz-animation: glass-show 0.2s 3.6s; animation: glass-show 0.2s 3.6s; }
+.anim-section.animating .anim-item.seo-glass { -webkit-animation: glass-show 1s forwards 3.8s; -moz-animation: glass-show 1s forwards 3.8s; animation: glass-show 1s forwards 3.8s; }
 
 @-webkit-keyframes terminal-item { 0% { opacity: 1; bottom: -60%; } 100% { opacity: 1; bottom: 0; } }
 @-moz-keyframes terminal-item { 0% { opacity: 1; bottom: -60%; } 100% { opacity: 1; bottom: 0; } }
@@ -115,53 +115,100 @@
     100% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
 }
 
+@-webkit-keyframes bg-show {
+    0% { opacity: 0; -webkit-transform: translate3d(0,9.5%,0); transform: translate3d(0,9.5%,0); }
+    80% {-webkit-transform: translate3d(0,-3.16%,0); transform: translate3d(0,-3.16%,0); }
+    100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
+@-moz-keyframes bg-show {
+    0% { opacity: 0; -webkit-transform: translate3d(0,9.5%,0); transform: translate3d(0,9.5%,0); }
+    80% {-webkit-transform: translate3d(0,-3.16%,0); transform: translate3d(0,-3.16%,0); }
+    100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+}
 @keyframes bg-show {
     0% { opacity: 0; -webkit-transform: translate3d(0,9.5%,0); transform: translate3d(0,9.5%,0); }
     80% {-webkit-transform: translate3d(0,-3.16%,0); transform: translate3d(0,-3.16%,0); }
     100% { opacity: 1; -webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
 }
 
+@-webkit-keyframes seo-gear {
+    from { opacity: 0; -moz-transform: rotateZ(360deg); -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
+    60% { opacity: 1; }
+    to { opacity: 1; -moz-transform: rotateZ(0); -webkit-transform: rotateZ(0); transform: rotateZ(0); }
+}
+@-moz-keyframes seo-gear {
+    from { opacity: 0; -moz-transform: rotateZ(360deg); -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
+    60% { opacity: 1; }
+    to { opacity: 1; -moz-transform: rotateZ(0); -webkit-transform: rotateZ(0); transform: rotateZ(0); }
+}
 @keyframes seo-gear {
     from { opacity: 0; -moz-transform: rotateZ(360deg); -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
     60% { opacity: 1; }
     to { opacity: 1; -moz-transform: rotateZ(0); -webkit-transform: rotateZ(0); transform: rotateZ(0); }
 }
 
+@-webkit-keyframes opc-fade { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-moz-keyframes opc-fade { 0% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes opc-fade { 0% { opacity: 0; } 100% { opacity: 1; } }
 
+@-webkit-keyframes glass-show { 
+    0% { opacity: 1; -webkit-transform: scale(1.5); -moz-transform: scale(1.5); transform: scale(1.5); }
+    50% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); }
+}
+@-moz-keyframes glass-show { 
+    0% { opacity: 1; -webkit-transform: scale(1.5); -moz-transform: scale(1.5); transform: scale(1.5); }
+    50% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); }
+}
 @keyframes glass-show { 
     0% { opacity: 1; -webkit-transform: scale(1.5); -moz-transform: scale(1.5); transform: scale(1.5); }
     50% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); }
 }
 
-@keyframes paper-reverse {
-    0% { transform: rotateY(90deg); }
-    100% { transform: rotateY(0deg); }
+@-webkit-keyframes paper-reverse {
+    0% { -webkit-transform: rotateY(90deg); -moz-transform: rotateY(90deg); transform: rotateY(90deg); }
+    100% { -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); transform: rotateY(0deg); }
 }
+@-moz-keyframes paper-reverse {
+    0% { -webkit-transform: rotateY(90deg); -moz-transform: rotateY(90deg); transform: rotateY(90deg); }
+    100% { -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); transform: rotateY(0deg); }
+}
+@keyframes paper-reverse {
+    0% { -webkit-transform: rotateY(90deg); -moz-transform: rotateY(90deg); transform: rotateY(90deg); }
+    100% { -webkit-transform: rotateY(0deg); -moz-transform: rotateY(0deg); transform: rotateY(0deg); }
+}
+
 
 @media(min-width: 1px) and (max-width: 479px) {
     .as-terminal .anim-section { width: 300px; height: 135px; }
     .as-terminal.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kkBnqKSRmkpqoij/terminal-b.png) no-repeat center center; }
     .as-lang .anim-section { width: 260px; height: 158px; }
     .as-lang.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kmBnqKSRmklpnii/lan-bg.png) no-repeat center center; }
+    .as-seo .anim-section { width: 285px; height: 155px; }
+    .as-seo.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kqBnqKSRrlojror/seo.png) no-repeat center center; }
 }
 @media(min-width: 480px){
     .as-terminal .anim-section { width: 460px; height: 207px; }
     .as-terminal.ie8 { background: url(http://a0.leadongcdn.cn/cloud/klBnqKSRmkpqqij/terminal-b.png) no-repeat center center; }
     .as-lang .anim-section { width: 420px; height: 256px; }
     .as-lang.ie8 { background: url(http://a0.leadongcdn.cn/cloud/krBnqKSRmklpoij/lan-bg.png) no-repeat center center; }
+    .as-seo .anim-section { width: 400px; height: 217px; }
+    .as-seo.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kqBnqKSRrlnrqjr/seo.png) no-repeat center center; }
 }
 @media(min-width:768px){
     .as-terminal .anim-section { width: 494px; height: 222px; }
     .as-terminal.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kiBnqKSRmkrnomj/terminal-b.png) no-repeat center center; }
     .as-lang .anim-section { width: 445px; height: 271px; }
     .as-lang.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kiBnqKSRmklpqij/lan-bg.png) no-repeat center center; }
+    .as-seo .anim-section { width: 445px; height: 242px; }
+    .as-seo.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kpBnqKSRrlnrpjr/seo.png) no-repeat center center; }
 }
 @media(min-width:990px){
     .as-terminal .anim-section { width: 632px; height: 285px; }
     .as-terminal.ie8 { background: url(http://a0.leadongcdn.cn/cloud/koBnqKSRmkiikrr/terminal-b.png) no-repeat center center; }
     .as-lang .anim-section { width: 570px; height: 347px; }
     .as-lang.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kjBnqKSRmklppij/lan-bg.png) no-repeat center center; }
+    .as-seo .anim-section { width: 570px; height: 309px; }
+    .as-seo.ie8 { background: url(http://a0.leadongcdn.cn/cloud/kmBnqKSRrlnrmjr/seo.png) no-repeat center center; }
 }
 @media(min-width:1290px){
     .as-terminal .anim-section { width: 777px; height: 350px; }
