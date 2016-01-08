@@ -10,10 +10,14 @@ $(function(){
         $('.as-lang').addClass("ie8");
         $('.as-lang .anim-item').hide();
 
+        $('.as-seo').addClass("ie8");
+        $('.as-seo .anim-item').hide();
+
         console.log("no animation");
     } else {
         scrollShow($('.as-terminal .anim-section'));
         scrollShow($('.as-lang .anim-section'));
+        scrollShow($('.as-seo .anim-section'));
 
         console.log("animation");
     }
