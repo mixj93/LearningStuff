@@ -12,27 +12,23 @@ $(function(){
 
         $('.as-seo').addClass("ie8");
         $('.as-seo .anim-item').hide();
-
-        console.log("no animation");
     } else {
         scrollShow($('.as-terminal .anim-section'));
         scrollShow($('.as-lang .anim-section'));
         scrollShow($('.as-seo .anim-section'));
-
-        console.log("animation");
     }
 
     function scrollShow(ele) {
         if (!!ele.length) {
-            var winHeight = $(window).outerHeight(); console.log("Window height: " + winHeight);
-            var eleTop = Math.round(ele.offset().top); console.log("Element top: " + eleTop);
-            var eleHeight = Math.round(ele.outerHeight()); console.log("ELement height: " + eleHeight);
+            var winHeight = $(window).outerHeight();
+            var eleTop = Math.round(ele.offset().top);
+            var eleHeight = Math.round(ele.outerHeight());
             var winScrollTop;
 
             $(window).on('scroll', function() {
-                winScrollTop = Math.round($(window).scrollTop());  console.log("Window scroll top: " + winScrollTop);
-                var maxTop = Math.round(winScrollTop + winHeight - eleHeight*0.5); console.log("Max top: " + maxTop);
-                var minTop = Math.round(winScrollTop - eleHeight*0.5); console.log("Min top: " + minTop);
+                winScrollTop = Math.round($(window).scrollTop());
+                var maxTop = Math.round(winScrollTop + winHeight - eleHeight*0.5);
+                var minTop = Math.round(winScrollTop - eleHeight*0.5);
                 if(maxTop >= eleTop && eleTop >= minTop) {
                     if (!ele.hasClass("animating")) {
                         ele.addClass("animating");
