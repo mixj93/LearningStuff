@@ -1,0 +1,27 @@
+{
+  "name": "jquery-bootstrap-in-action",
+  "homepage": "https://github.com/mixj93/LearningStuff",
+  "authors": [
+    "mixj93 <mixj93@163.com>"
+  ],
+  "description": "test bower by using jQuery and bootstrap",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "jQuery",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6"
+  }
+}
