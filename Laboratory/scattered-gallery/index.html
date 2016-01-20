@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scattered Gallery</title>
+    <style type="text/css">
+        * { margin: 0; padding: 0; }
+        body {
+            background-color: #fff;
+            color: #555;
+            font-family: ;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            
+            -webkit-perspective: 800px;
+        }
+
+        .photo {
+            width: 240px;
+            height: 360px;
+            position: absolute;
+            z-index: 1;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+        }
+        .photo .side {
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .photo .side-front {
+
+        }
+        .photo .side-front .image {
+            width: 100%;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .photo .side-front .image img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .photo .side-front .caption {
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .photo .side-back {}
+        .photo .side-back .desc {
+            color: #898989;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        .photo_center {
+            left: 50%;
+            top: 50%;
+            margin: -180px 0 0 -120px;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body onselectstart="return false;"><!-- 防止选中图文 -->
+    <div class="wrap">
+        <div class="photo photo_center">
+            <div class="photo-wrap">
+                <div class="side side-front">
+                    <div class="image"><img src="http://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2263822658.jpg"></div>
+                    <p class="caption">标题信息</p>
+                </div>
+                <div class="side side-back">
+                    <p class="desc">描述信息</p>
+                </div>
+            </div>    
+        </div>
+    </div>
+</body>
+</html>
