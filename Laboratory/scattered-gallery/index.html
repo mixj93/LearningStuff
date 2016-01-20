@@ -19,6 +19,7 @@
             overflow: hidden;
             
             -webkit-perspective: 800px;
+            perspective: 800px;
         }
 
         .photo {
@@ -36,9 +37,7 @@
             top: 0;
             right: 0;
         }
-        .photo .side-front {
-
-        }
+        .photo .side-front {}
         .photo .side-front .image {
             width: 100%;
             height: 300px;
@@ -68,11 +67,43 @@
             margin: -180px 0 0 -120px;
             z-index: 999;
         }
+
+        .photo-wrap {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: all 0.6s;
+            transition: all 0.6s;
+        }
+        .photo-wrap .side {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .photo-wrap .side-front {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+        .photo-wrap .side-back {
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+
+        .photo_front .photo-wrap {
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+        }
+        .photo_back .photo-wrap {
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
     </style>
 </head>
 <body onselectstart="return false;"><!-- 防止选中图文 -->
     <div class="wrap">
-        <div class="photo photo_center">
+        <div class="photo photo_center photo_front" onclick="turn(this)">
             <div class="photo-wrap">
                 <div class="side side-front">
                     <div class="image"><img src="http://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2263822658.jpg"></div>
@@ -84,5 +115,19 @@
             </div>    
         </div>
     </div>
+
+    <script type="text/javascript">
+        // 1. 翻面控制
+        function turn (elem) {
+            var cls = elem.className;
+            if (/photo_front/.test(cls)) {
+                cls = cls.replace(/photo_front/, "photo_back");
+            } else {
+                cls = cls.replace(/photo_back/, "photo_front");
+            }
+
+            return elem.className = cls;
+        }
+    </script>
 </body>
 </html>
