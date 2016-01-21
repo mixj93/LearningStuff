@@ -47,10 +47,10 @@
 .anim-section.animating .anim-item.lang-cn { -webkit-animation: pin-show 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.1s; -moz-animation: pin-show 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.1s; animation: pin-show 0.8s cubic-bezier(0.77, 0, 0.175, 1) 2.1s; }
 .anim-section.animating .anim-item.lang-jp { -webkit-animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.8s; -moz-animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.8s; animation: zoom-globe 0.5s cubic-bezier(0.77, 0, 0.175, 1) 1.8s; }
 
-.anim-section.animating .anim-item.seo-browser { -webkit-animation: bg-show 0.6s forwards; -moz-animation: bg-show 0.6s forwards; animation: bg-show 0.6s forwards; }
-.anim-section.animating .anim-item.seo-gear-left { -webkit-animation: seo-gear 1s forwards 0.8s; -moz-animation: seo-gear 1s forwards 0.8s; animation: seo-gear 1s forwards 0.8s;}
-.anim-section.animating .anim-item.seo-gear-right { -webkit-animation: seo-gear 0.8s forwards 1.4s; -moz-animation: seo-gear 0.8s forwards 1.4s; animation: seo-gear 0.8s forwards 1.4s; }
-.anim-section.animating .anim-item.seo-shadow { -webkit-animation: opc-fade 1s forwards 1.8s; -moz-animation: opc-fade 1s forwards 1.8s; animation: opc-fade 1s forwards 1.8s; }
+.anim-section.animating .anim-item.seo-browser { -webkit-animation: bg-show 0.6s; -moz-animation: bg-show 0.6s; animation: bg-show 0.6s; }
+.anim-section.animating .anim-item.seo-gear-left { -webkit-animation: seo-gear 1s 0.8s; -moz-animation: seo-gear 1s 0.8s; animation: seo-gear 1s 0.8s;}
+.anim-section.animating .anim-item.seo-gear-right { -webkit-animation: seo-gear 0.8s 1.4s; -moz-animation: seo-gear 0.8s 1.4s; animation: seo-gear 0.8s 1.4s; }
+.anim-section.animating .anim-item.seo-shadow { -webkit-animation: opc-fade 1s 1.8s; -moz-animation: opc-fade 1s 1.8s; animation: opc-fade 1s 1.8s; }
 .anim-section.animating .anim-item.seo-graphic-1 { -webkit-animation: paper-reverse 0.2s 2s; -moz-animation: paper-reverse 0.2s 2s;  animation: paper-reverse 0.2s 2s; }
 .anim-section.animating .anim-item.seo-graphic-2 { -webkit-animation: paper-reverse 0.2s 2.2s; -moz-animation: paper-reverse 0.2s 2.2s; animation: paper-reverse 0.2s 2.2s; }
 .anim-section.animating .anim-item.seo-graphic-3 { -webkit-animation: paper-reverse 0.2s 2.4s; -moz-animation: paper-reverse 0.2s 2.4s; animation: paper-reverse 0.2s 2.4s; }
@@ -60,7 +60,7 @@
 .anim-section.animating .anim-item.seo-dot-2 { -webkit-animation: glass-show 0.2s 3.2s; -moz-animation: glass-show 0.2s 3.2s; animation: glass-show 0.2s 3.2s; }
 .anim-section.animating .anim-item.seo-dot-3 { -webkit-animation: glass-show 0.2s 3.4s; -moz-animation: glass-show 0.2s 3.4s; animation: glass-show 0.2s 3.4s; }
 .anim-section.animating .anim-item.seo-seo { -webkit-animation: glass-show 0.2s 3.6s; -moz-animation: glass-show 0.2s 3.6s; animation: glass-show 0.2s 3.6s; }
-.anim-section.animating .anim-item.seo-glass { -webkit-animation: glass-show 1s forwards 3.8s; -moz-animation: glass-show 1s forwards 3.8s; animation: glass-show 1s forwards 3.8s; }
+.anim-section.animating .anim-item.seo-glass { -webkit-animation: glass-show 1s 3.8s; -moz-animation: glass-show 1s 3.8s; animation: glass-show 1s 3.8s; }
 
 @-webkit-keyframes terminal-item { 0% { opacity: 1; bottom: -60%; } 100% { opacity: 1; bottom: 0; } }
 @-moz-keyframes terminal-item { 0% { opacity: 1; bottom: -60%; } 100% { opacity: 1; bottom: 0; } }
@@ -88,8 +88,8 @@
 }
 
 @-webkit-keyframes pin-show {
-    0% { opacity: 1; -webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); transform-origin: center bottom; } 
-    39% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); transform-origin: center bottom; } 
+    0% { opacity: 1; -webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); -webkit-transform-origin: center bottom; -moz-transform-origin: center bottom; transform-origin: center bottom; } 
+    39% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); -webkit-transform-origin: center bottom; -moz-transform-origin: center bottom; transform-origin: center bottom; } 
     40% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
     55% { opacity: 1; -webkit-transform: translateY(-25%); -moz-transform: translateY(-25%); transform: translateY(-25%); }
     70% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
@@ -97,8 +97,8 @@
     100% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
 }
 @-moz-keyframes pin-show {
-    0% { opacity: 1; -webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); transform-origin: center bottom; } 
-    39% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); transform-origin: center bottom; } 
+    0% { opacity: 1; -webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); -webkit-transform-origin: center bottom; -moz-transform-origin: center bottom; transform-origin: center bottom; } 
+    39% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); -webkit-transform-origin: center bottom; -moz-transform-origin: center bottom; transform-origin: center bottom; } 
     40% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
     55% { opacity: 1; -webkit-transform: translateY(-25%); -moz-transform: translateY(-25%); transform: translateY(-25%); }
     70% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
@@ -106,8 +106,8 @@
     100% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
 }
 @keyframes pin-show {
-    0% { opacity: 1; -webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); transform-origin: center bottom; } 
-    39% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); transform-origin: center bottom; } 
+    0% { opacity: 1; -webkit-transform: scale(0); -moz-transform: scale(0); transform: scale(0); -webkit-transform-origin: center bottom; -moz-transform-origin: center bottom; transform-origin: center bottom; } 
+    39% { opacity: 1; -webkit-transform: scale(1); -moz-transform: scale(1); transform: scale(1); -webkit-transform-origin: center bottom; -moz-transform-origin: center bottom; transform-origin: center bottom; } 
     40% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }
     55% { opacity: 1; -webkit-transform: translateY(-25%); -moz-transform: translateY(-25%); transform: translateY(-25%); }
     70% { opacity: 1; -webkit-transform: translateY(0); -moz-transform: translateY(0); transform: translateY(0); }

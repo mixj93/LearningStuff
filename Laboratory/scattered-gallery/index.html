@@ -8,7 +8,7 @@
         body {
             background-color: #fff;
             color: #555;
-            font-family: ;
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
             font-size: 14px;
             -webkit-font-smoothing: antialiased;
         }
@@ -19,6 +19,8 @@
             overflow: hidden;
             
             -webkit-perspective: 800px;
+            -moz-perspective: 800px;
+            -ms-perspective: 800px;
             perspective: 800px;
         }
 
@@ -74,49 +76,108 @@
             height: 100%;
 
             -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            -ms-transform-style: preserve-3d;
             transform-style: preserve-3d;
             -webkit-transition: all 0.6s;
+            -ms-transition: all 0.6s;
             transition: all 0.6s;
         }
         .photo-wrap .side {
             -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
             backface-visibility: hidden;
         }
         .photo-wrap .side-front {
             -webkit-transform: rotateY(0deg);
+            -moz-transform: rotateY(0deg);
+            -ms-transform: rotateY(0deg);
             transform: rotateY(0deg);
         }
         .photo-wrap .side-back {
             -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
             transform: rotateY(180deg);
         }
 
         .photo_front .photo-wrap {
             -webkit-transform: rotateY(0deg);
+            -moz-transform: rotateY(0deg);
+            -ms-transform: rotateY(0deg);
             transform: rotateY(0deg);
         }
         .photo_back .photo-wrap {
             -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
             transform: rotateY(180deg);
         }
     </style>
 </head>
 <body onselectstart="return false;"><!-- 防止选中图文 -->
-    <div class="wrap">
-        <div class="photo photo_center photo_front" onclick="turn(this)">
-            <div class="photo-wrap">
-                <div class="side side-front">
-                    <div class="image"><img src="http://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2263822658.jpg"></div>
-                    <p class="caption">标题信息</p>
-                </div>
-                <div class="side side-back">
-                    <p class="desc">描述信息</p>
-                </div>
-            </div>    
-        </div>
+    <!-- 2. 改写视图 为模板字符串 -->
+    <div class="wrap" id="wrap">
+        
     </div>
-
+    
+    <script type="text/javascript" src="data.js"></script>
     <script type="text/javascript">
+        // 3. 通用函数
+        function g (selector) {
+            var method = selector.substr(0, 1) == '.' ? 'getElementsByClassName' : 'getElementById';
+            return document[method](selector.substr(1));
+        }
+
+        // 生成随机数 范围
+        function random (range) {
+            var max = Math.max( range[0], range[1] );
+            var min = Math.min( range[0], range[1] );
+            var diff = max - min;
+            var number = Math.floor( Math.random()*diff + min );
+
+            return number;
+        }
+
+        // 4. 输出所有的海报
+        var data = data;
+        function addPhotos() {
+            //var template = g('#wrap').innerHTML;
+            var template = 
+                '        <div class="photo photo_front" id="photo_{{index}}" onclick="turn(this)">'+
+                '            <div class="photo-wrap">'+
+                '                <div class="side side-front">'+
+                '                    <div class="image"><img src="images/{{img}}"></div>'+
+                '                    <p class="caption">{{caption}}</p>'+
+                '                </div>'+
+                '                <div class="side side-back">'+
+                '                    <p class="desc">{{desc}}</p>'+
+                '                </div>'+
+                '            </div>    '+
+                '        </div>';
+            var html = [];
+
+            for(var s in data) {
+                var _html = template.replace('{{index}}', s)
+                                    .replace('{{img}}', data[s].img)
+                                    .replace('{{caption}}', data[s].caption)
+                                    .replace('{{desc}}', data[s].desc);
+
+                html.push(_html);
+                g('#wrap').innerHTML = html.join('');
+            }
+
+            rsort( random([0, data.length]) ); //初始化排序
+        }
+        addPhotos();
+
+        // 5. 排序海报
+        function rsort (n) {
+            var photo_center = g('#photo_' + n);
+            photo_center.className += ' photo_center';
+        }
+
         // 1. 翻面控制
         function turn (elem) {
             var cls = elem.className;
