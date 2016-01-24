@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count Down Button</title>
+    <script type="text/javascript" src="../addons/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <a href="javascript:;" id="btn">点击按钮</a>
+
+    <script type="text/javascript">
+        var t, timeLeft;
+
+        function btnBind() {
+            $("#btn").unbind("click").bind("click", function(){
+                console.log("点击按钮啦");
+                $(this).text("按钮已点击");
+                var cdElem = $('<span>(<span id="countNum"></span>)</span>');
+                $(this).append(cdElem);
+                showCountDown(10);
+                $(this).unbind("click");
+            });
+        }
+
+        function showCountDown (n) {
+            timeLeft = n;
+            if(timeLeft > 0){
+                $('#countNum').text(timeLeft);
+                timeLeft -= 1;
+                t = setTimeout("showCountDown(timeLeft)", 1000);
+            } else {
+                clearTimeout(t);
+                $('#countNum').text('0');
+                $('#btn').text("点击按钮");
+                btnBind();
+            }
+        }
+
+        btnBind();
+    </script>
+</body>
+</html>
