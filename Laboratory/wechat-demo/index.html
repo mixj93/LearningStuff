@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信自定义菜单</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="menu_setting_area js_editBox">
+
+        <div class="menu_preview_area">
+            <div class="mobile_menu_preview">
+                <div class="mobile_hd tc">焦点科技领动云建站平台</div>
+                <div class="mobile_bd">
+                    <!-- 无任何菜单 -->
+                    <ul class="pre_menu_list grid_line no_menu" id="menuList">
+                        <li class="js_addMenuBox pre_menu_item grid_item no_extra size1of1">
+                            <a href="javascript:void(0);" class="pre_menu_link js_addL1Btn" title="最多添加3个一级菜单" draggable="false">
+                                <i class="icon14_menu_add"></i>
+                                <span class="js_addMenuTips">添加菜单</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- 菜单排序 -->
+            <div class="sort_btn_wrp">
+                <a id="orderBt" class="btn btn_default" href="javascript:void(0);" style="display: none;">菜单排序</a>
+                <span id="orderDis" class="dn btn btn_disabled">菜单排序</span>
+                <a id="finishBt" href="javascript:void(0);" class="dn btn btn_default"  style="display: none;">完成</a>
+            </div>
+
+        </div>
+
+        <div class="menu_form_area">
+            <div id="js_none" class="menu_initial_tips tips_global" style="display: block;"></div>
+
+        </div>
+
+    </div>
+
+<!--     <div class="tool_bar tc js_editBox">
+        <span id="pubBt" class="btn btn_input btn_primary" style="display: inline-block;"><button>保存并发布</button></span>
+        <a href="javascript:void(0);" class="btn btn_default" id="viewBt" style="display: inline-block;">预览</a>
+    </div> -->
+    
+    <a href="javascript:;" id="deleteBtn">删除菜单</div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
