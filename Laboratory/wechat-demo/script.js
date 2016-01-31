@@ -381,13 +381,40 @@
         }
     }
 
-    function setMenuNameInputVal (argument) {
+    function setMenuNameInputVal () {
         $("input.frm_input.js_menu_name").val(getHighlightedMenuName());
+    }
+
+    function formRadioClickBind () {
+        $(".frm_radio_label").unbind("click").bind("click", function () {
+            $(this).siblings(".frm_radio_label").removeClass("selected");
+            $(this).addClass("selected");
+
+            if ($(this).hasClass("js_radio_sendMsg")) {
+                $(".menu_content").hide();
+                $(".menu_content.send").show();
+            } else if ($(this).hasClass("js_radio_url")) {
+                $(".menu_content").hide();
+                $(".menu_content.url").show();
+            }
+        });
+    }
+
+    function formTabClickBind () {
+        $("#editDiv .tab_nav>a").unbind("click").bind("click", function() {
+            var tab = $(this).parent().attr("data-tab");
+            $("#editDiv .tab_nav").removeClass("selected");
+            $(this).parent().addClass("selected");
+            $("#editDiv .tab_content").hide();
+            $("#editDiv .tab_content").has(tab).show();
+        });
     }
 
     function formEventBind () {
         menuDeleteBind();
         menuNameInputBind();
+        formRadioClickBind();
+        formTabClickBind();
     }
 
 
