@@ -415,6 +415,20 @@
         menuNameInputBind();
         formRadioClickBind();
         formTabClickBind();
+        setUrlFormCheck();
+    }
+
+    //设置跳转链接，参数isChecked为true是已验证，false是未验证
+    function setUrlFormCheck (isChecked) {
+        if (isChecked) {
+            $("#urlForm .frm_input_box").removeClass("disabled");
+            $("#urlText").val("");
+            $("#urlText").removeAttr("disabled");
+        } else {
+            $("#urlForm .frm_input_box").addClass("disabled");
+            $("#urlText").val("认证后才可手动输入地址");
+            $("#urlText").attr("disabled", "disabled");
+        }
     }
 
 
