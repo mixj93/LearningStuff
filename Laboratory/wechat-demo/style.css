@@ -32,15 +32,6 @@
 .portable_editor.to_bottom .editor_arrow{display:inline-block;width:0;height:0;border-width:12px;border-style:dashed;border-color:transparent;border-bottom-width:0;border-top-color:#e7e7eb;border-top-style:solid}
 .portable_editor.to_bottom .editor_arrow_out{bottom:0}
 .portable_editor.to_bottom .editor_arrow_in{bottom:1px;border-top-color:#f4f5f9}
-.simulator{width:318px;margin:0 auto;border:1px solid #e7e7eb}
-.simulator_hd{position:relative;height:65px;background:transparent url(/mpres/htmledition/images/homepage/banner_control23b288.png) no-repeat 0 0}
-.simulator_hd .title{position:absolute;bottom:10px;font-weight:normal;color:#fff;text-align:center;left:60px;right:50px;height:1.6em;overflow:hidden}
-.simulator_bd{min-height:450px}
-.plugin_content{position:relative}
-.plugin_mask{position:absolute;top:0;left:0;right:0;bottom:0;text-align:center;background-color:rgba(229,229,229,0.85);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d9e5e5e5',endcolorstr='#d9e5e5e5')}
-.plugin_mask a{position:absolute;top:50%;margin-top:-11px;left:50%;margin-left:-11px}
-.plugin_mask.transparent{display:none!important;background-color:transparent;cursor:default}
-.plugin_mask.transparent a{display:none}
 .main_bd{padding-bottom:0 0 50px}
 .menu_setting_tips{padding-bottom:20px}
 .menu_initial_box{text-align:center;background:transparent url(/mpres/htmledition/images/pic/menu/pic_menu_preview2968da.png) no-repeat 0 0;background-position:150px 100px;padding:280px 0 0 220px;min-height:300px}
