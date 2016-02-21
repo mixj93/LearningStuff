@@ -1,0 +1,26 @@
+HEADER    NUCLEAR RECEPTOR                        31-MAR-99   3ERD              
+TITLE     HUMAN ESTROGEN RECEPTOR ALPHA LIGAND-BINDING DOMAIN IN                
+TITLE    2 COMPLEX WITH DIETHYLSTILBESTROL AND A GLUCOCORTICOID                 
+TITLE    3 RECEPTOR INTERACTING PROTEIN 1 NR BOX II PEPTIDE                     
+COMPND    MOL_ID: 1;                                                            
+COMPND   2 MOLECULE: PROTEIN (ESTROGEN RECEPTOR ALPHA);                         
+COMPND   3 CHAIN: A, B;                                                         
+COMPND   4 FRAGMENT: LIGAND-BINDING DOMAIN;                                     
+COMPND   5 SYNONYM: OESTROGEN RECEPTOR, ER LBD;                                 
+COMPND   6 ENGINEERED: YES;                                                     
+COMPND   7 MOL_ID: 2;                                                           
+COMPND   8 MOLECULE: PROTEIN (GLUCOCORTICOID RECEPTOR INTERACTING               
+COMPND   9 PROTEIN 1);                                                          
+COMPND  10 CHAIN: C, D;                                                       
+COMPND  11 FRAGMENT: NUCLEAR RECEPTOR BOX II;                                   
+COMPND  12 SYNONYM: GRIP1                                                       
+SOURCE    MOL_ID: 1;
+SOURCE   2 ORGANISM_SCIENTIFIC: HOMO SAPIENS;
+SOURCE   3 ORGANISM_COMMON: HUMAN;                                              
+SOURCE   4 ORGANISM_TAXID: 9606;                                                
+SOURCE   5 GENE: ESTROGEN RECEPTOR ALPHA;                                       
+SOURCE   6 EXPRESSION_SYSTEM: ESCHERICHIA COLI;                                 
+SOURCE   7 EXPRESSION_SYSTEM_TAXID: 562;                                        
+SOURCE   8 EXPRESSION_SYSTEM_STRAIN: BL21(DE3)PLYSS;                            
+SOURCE   9 EXPRESSION_SYSTEM_CELLULAR_LOCATION: CYTOPLASM;                      
+SOURCE  10 EXPRESSION_SYSTEM_PLASMID: PET23D;
