@@ -11,11 +11,11 @@ COMPND   6 ENGINEERED: YES;
 COMPND   7 MOL_ID: 2;                                                           
 COMPND   8 MOLECULE: PROTEIN (GLUCOCORTICOID RECEPTOR INTERACTING               
 COMPND   9 PROTEIN 1);                                                          
-COMPND  10 CHAIN: C, D;                                                         
+COMPND  10 CHAIN: C, D;                                                       
 COMPND  11 FRAGMENT: NUCLEAR RECEPTOR BOX II;                                   
 COMPND  12 SYNONYM: GRIP1                                                       
-SOURCE    MOL_ID: 1;                                                            
-SOURCE   2 ORGANISM_SCIENTIFIC: HOMO SAPIENS;                                   
+SOURCE    MOL_ID: 1;
+SOURCE   2 ORGANISM_SCIENTIFIC: HOMO SAPIENS;
 SOURCE   3 ORGANISM_COMMON: HUMAN;                                              
 SOURCE   4 ORGANISM_TAXID: 9606;                                                
 SOURCE   5 GENE: ESTROGEN RECEPTOR ALPHA;                                       
