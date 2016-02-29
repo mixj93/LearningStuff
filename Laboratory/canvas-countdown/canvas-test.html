@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas Test</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600" style="border: 1px solid #ddd; display: block; margin:20px auto;">
+		当前浏览器不支持Canvas，请使用更高版本浏览器访问本页。
+	</canvas>
+
+	<script type="text/javascript">
+		window.onload = function () {
+			var canvas = document.getElementById('canvas');
+
+			// 也可以这样指定canvas大小
+			canvas.width = 800;
+			canvas.height = 600;
+
+			if (canvas.getContext("2d")) {
+				var context = canvas.getContext("2d");
+			} else {
+				alert("当前浏览器不支持Canvas，请使用更高版本浏览器访问本页。");
+			}
+
+			// 画直线
+			// 绘制状态
+			context.beginPath();
+			context.moveTo(100, 100);
+			context.lineTo(500, 500);
+			context.lineTo(500, 100);
+			context.lineTo(100, 100);
+			context.closePath();
+			context.lineWidth = 5;
+			context.strokeStyle = "#209eea";
+			context.fillStyle = "#efefef";
+
+			context.fill(); // 动作 填充
+			context.stroke(); // 动作 画线	
+			context.beginPath();
+			context.moveTo(200, 100);
+			context.lineTo(500, 400);
+			context.closePath();
+			context.lineWidth = 10;
+			context.strokeStyle = "#E766BC";
+
+			context.stroke(); // 动作 画线
+
+			// 绘制弧线
+			
+		}
+	</script>
+</body>
+</html>
