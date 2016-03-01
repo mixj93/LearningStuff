@@ -25,7 +25,7 @@
 
 			// 画直线
 			// 绘制状态
-			context.beginPath();
+/*			context.beginPath();
 			context.moveTo(100, 100);
 			context.lineTo(500, 500);
 			context.lineTo(500, 100);
@@ -37,6 +37,7 @@
 
 			context.fill(); // 动作 填充
 			context.stroke(); // 动作 画线	
+
 			context.beginPath();
 			context.moveTo(200, 100);
 			context.lineTo(500, 400);
@@ -44,10 +45,16 @@
 			context.lineWidth = 10;
 			context.strokeStyle = "#E766BC";
 
-			context.stroke(); // 动作 画线
+			context.stroke(); // 动作 画线*/
 
 			// 绘制弧线
-			
+			context.lineWidth = 2;
+			context.strokeStyle = "#FBA74B";
+			//context.beginPath();
+			context.arc(300, 300, 200, 0, 1.5*Math.PI);
+			// context.closePath();
+
+			context.stroke();
 		}
 	</script>
 </body>
