@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Promise Demo</title>
+</head>
+<body>
+	<p>效果见控制台输出</p>
+	<script type="text/javascript">
+		new Promise(function (resolve, reject) {
+		    console.log('start new Promise...');
+		    var timeOut = Math.random() * 2;
+		    console.log('set timeout to: ' + timeOut + ' seconds.');
+		    setTimeout(function () {
+		        if (timeOut < 1) {
+		            console.log('call resolve()...');
+		            resolve('200 OK');
+		        }
+		        else {
+		            console.log('call reject()...');
+		            reject('timeout in ' + timeOut + ' seconds.');
+		        }
+		    }, timeOut * 1000);
+		}).then(function (msg) {
+		    console.log('Done: ' + msg);
+		}).catch(function (error) {
+		    console.log('Failed: ' + error);
+		});
+
+	</script>
+</body>
+</html>
