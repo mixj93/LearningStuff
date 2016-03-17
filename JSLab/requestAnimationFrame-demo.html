@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Script-based animation using requestAnimationFrame</title>
+	<style>
+		div { position: absolute; left: 10px; padding: 50px; background: crimson; color: white; }
+        div#youWantToAnimate { position: absolute; top: 200px; left: 0; padding: 50px; background: #00E1BF; color: white; }
+	</style>
+</head>
+<body>
+	<button onclick="start()">Click me to start!</button>
+	<button onclick="stop()">Click me to stop!</button>
+	<div id="animated">Hello there.</div>
+
+    <div id="youWantToAnimate"></div>
+    <button onclick="stopReq(myReq)">stop the green one!</button>
+
+	<script>
+        window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+        var myReq;
+        var startTime = null;
+        var d = document.getElementById('youWantToAnimate');
+        function step(timestamp) { 
+            if (startTime === null) startTime = timestamp;
+                var progress = timestamp - startTime;
+                console.log("progress: " + progress);
+                if(parseInt(d.style.left)){
+                    d.style.left = (parseInt(d.style.left) + 10) + "px";
+                } else {
+                    d.style.left = 10 + "px";
+                }
+                if (progress < 20000) {
+                    myReq = requestAnimationFrame(step);
+                }
+        }
+        myReq = requestAnimationFrame(step);
+
+        function stopReq(req) {
+            window.cancelAnimationFrame(req);
+        }
+
+
+		var requestId = 0;
+
+		function animate(time) {
+            document.getElementById("animated").style.left = (time - animationStartTime) % 2000 / 4 + "px";
+            requestId = window.requestAnimationFrame(animate);
+		}
+		function start() {
+            animationStartTime = window.performance.now();
+            requestId = window.requestAnimationFrame(animate);
+		}
+		function stop() {
+            if (requestId)
+                window.cancelAnimationFrame(requestId);
+            requestId = 0;
+		}
+	</script>
+</body>
+</html>
