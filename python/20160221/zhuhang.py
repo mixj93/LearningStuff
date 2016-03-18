@@ -1,6 +1,6 @@
 #!/usr/bin/python
-
-file = open("1QKM_receptor.pdb")
+import re
+file = open("3erd.pdb")
 
 arr = []
 
@@ -22,8 +22,10 @@ def searchLine(keywords):
             hasKeywords = hasKeywords and arr[index].find(keywords[i])>0
 
         if hasKeywords:
-            print arr[index]
-            print "line: "
-            print index + 1
+            infoArr = re.split('\s+', arr[index])
+            print ("line: ")
+            print (index + 1)
+            print (arr[index])
+            print ("x: " + infoArr[6], "y: " + infoArr[7], "z: " + infoArr[8])
 
-searchLine(["ARG", "388", " N "])
+searchLine([" N ", " SER ", " 305 "])
