@@ -30,6 +30,18 @@ def searchLine(keywords):
             # print ("x: " + infoArr[6], "y: " + infoArr[7], "z: " + infoArr[8])
             return s
 
-a = searchLine([" N ", " SER ", " 305 "])
-b = searchLine([" A ", " HIS ", " 398 "])
-print a, b
+# searchLine([" N ", " SER ", " 305 "])
+
+def searchCol5(keyword):
+    resultArr = []
+    for index in range(len(arr)):
+        infoArr = re.split('\s+', arr[index])
+        if len(infoArr) >= 5:
+            if infoArr[4] == keyword:
+                # print (arr[index])
+                resultArr.append(arr[index])
+
+    resultStr = ''.join(resultArr)
+    print (resultStr)
+
+searchCol5('A');

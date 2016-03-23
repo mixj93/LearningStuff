@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pinterest pin demo</title>
+	<style type="text/css">
+		span[data-pin-log="button_pinit"] { position: absolute; }
+	</style>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+</head>
+<body>
+	<div>
+		<div class="picture-wrap">
+			<img id="img-1" alt="Angry Birds" src="http://ww4.sinaimg.cn/mw690/4aff7849jw1f23n62xwfsj20zk0zkdlj.jpg">
+		</div>
+		<div class="picture-wrap">
+			<img id="img-2" alt="Angry Birds" src="http://ww3.sinaimg.cn/mw690/4aff7849jw1f23n63r877j20zk0zkaf6.jpg">
+		</div>
+		<div class="picture-wrap">
+			<img id="img-3" alt="Angry Birds" src="http://ww4.sinaimg.cn/mw690/4aff7849jw1f23n64hdphj20zk0zkgrd.jpg">
+		</div>
+		<div class="picture-wrap">
+			<img id="img-4" alt="Angry Birds" src="http://ww3.sinaimg.cn/mw690/4aff7849jw1f23n650tckj20zk0zk7ah.jpg">
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		// var te = null; 
+		// var tl = null;
+
+		//$("img").each(function() {
+			// var pinBtnHtml = 
+			// 	"<a data-pin-do='buttonPin' href='https://www.pinterest.com/pin/create/button/?url=" + window.location.href
+			// 	+ "&media=" + $(this).attr('src') 
+			// 	+ "&description=" + $(this).attr('alt')
+			// 	+ "'</a>";
+			// $(this).after(pinBtnHtml);
+		//});
+
+		// function imgBindMouseEnter() {
+		// 	$("img").mouseenter(function(){
+		// 		clearTimeout(tl);
+		// 		console.log("enter");
+		// 		te = setTimeout(function(){
+		// 			imgBindMouseLeave();
+		// 		}, 100);
+		// 	});
+		// }
+
+		// function imgBindMouseLeave() {
+
+		/*$("img").mouseleave(function(){
+				clearTimeout(te);
+				console.log("leave");
+				tl = setTimeout(function(){
+					imgBindMouseEnter();
+				}, 100);
+			});
+		}*/
+
+		// $(".picture-wrap img").hover(function(){
+		// 		var _this = $(this);
+		// 		clearTimeout(tl);
+		// 		te = setTimeout(function(){
+		// 			console.log("enter"+_this.attr("id"));
+		// 			//imgBindMouseEnter();
+		// 		}, 300);
+		// 	},function () {
+		// 		var _this = $(this);
+		// 		clearTimeout(te);
+		// 		tl = setTimeout(function(){
+		// 			console.log("leave"+_this.attr("id"));
+		// 			//imgBindMouseLeave();
+		// 		}, 300);
+		// });
+
+		function imgBindMouseEnter() {
+			$("img").each(function () {
+				$(this).mouseenter(function(){
+					console.log("enter "+$(this).attr("id"));
+					var imgLeft = $(this).offset().left;
+					var imgTop = $(this).offset().top;
+					addPinBtn($(this));
+
+				});
+			});
+		}
+
+		function imgBindMouseLeave() {
+			$("img").each(function () {
+				$(this).mouseleave(function(){
+					console.log("leave "+$(this).attr("id"));
+				});
+			});
+		}
+
+		imgBindMouseEnter();
+		imgBindMouseLeave();
+		
+
+		function addPinBtn(ele) {
+			if($("body span[data-pin-log]").length > 0 || $("body a[data-pin-do").length>0) {
+				$("body span[data-pin-log]").remove();
+				$("body a[data-pin-do]").remove();
+			}
+
+			var pinBtnHtml = 
+				"<a data-pin-do='buttonPin' href='https://www.pinterest.com/pin/create/button/"
+				//+ "?url=" + encodeURIComponent(window.location.href)
+				// + "?media=" + ele.attr('src') 
+				// + "&description=" + encodeURIComponent(ele.attr('alt')) + "'"
+				+ "'</a>";
+
+			$("body").append(pinBtnHtml);
+		}
+	</script>
+</body>
+</html>
