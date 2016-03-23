@@ -23,9 +23,13 @@ def searchLine(keywords):
 
         if hasKeywords:
             infoArr = re.split('\s+', arr[index])
-            print ("line: ")
-            print (index + 1)
-            print (arr[index])
-            print ("x: " + infoArr[6], "y: " + infoArr[7], "z: " + infoArr[8])
+            # print ("line: ")
+            # print (index + 1)
+            # print (arr[index])
+            s = [float(infoArr[6]), float(infoArr[7]), float(infoArr[8])]
+            # print ("x: " + infoArr[6], "y: " + infoArr[7], "z: " + infoArr[8])
+            return s
 
-searchLine([" N ", " SER ", " 305 "])
+a = searchLine([" N ", " SER ", " 305 "])
+b = searchLine([" A ", " HIS ", " 398 "])
+print a, b
