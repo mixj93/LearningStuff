@@ -31,7 +31,6 @@
 	<script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
 </head>
 <body>
-	<span class="pin-button"></span>
 	<div>
 		<div class="picture-wrap">
 			<img id="img-1" alt="Angry Birds" src="http://ww4.sinaimg.cn/mw690/4aff7849jw1f23n62xwfsj20zk0zkdlj.jpg">
@@ -48,6 +47,7 @@
 
 	</div>
 	<script type="text/javascript">
+		var _btnThis;
 		function imgBindMouseEnter() {
 			$("img").each(function () {
 				$(this).mouseenter(function(){
@@ -57,6 +57,9 @@
 					var imgHeight = $(this).innerHeight();
 					if(window.PinUtils){
 						if (imgWidth > 200 && imgHeight > 200) {
+							if($(".pin-button").length <= 0) {
+								$("body").append("<span class='pin-button'></span>");
+							}
 							$("span.pin-button").css({"left": btnLeft + 'px', "top": btnTop + 'px'}).show();
 						}
 					}
@@ -67,16 +70,16 @@
 		function imgBindMouseLeave() {
 			$("img").each(function () {
 				$(this).mouseleave(function(e){
-					var _btnThis = $(this);
-					var imgLeft = _btnThis.offset().left;
-					var imgTop = _btnThis.offset().top;
-					var imgWidth = _btnThis.innerWidth();
-					var imgHeight = _btnThis.innerHeight();
+					var imgLeft = $(this).offset().left;
+					var imgTop = $(this).offset().top;
+					var imgWidth = $(this).innerWidth();
+					var imgHeight = $(this).innerHeight();
 					var curX = e.pageX;
 					var curY = e.pageY;
 					if (e.pageX<imgLeft || e.pageX>imgLeft+imgWidth || e.pageY<imgTop || e.pageY>imgTop+imgHeight) {
 						$("span.pin-button").hide();
 					} else {
+						_btnThis = $(this);
 						$(".pin-button").click(function () {
 							PinUtils.pinOne({ 
 							   'url': window.location.href, 
@@ -91,23 +94,6 @@
 
 		imgBindMouseEnter();
 		imgBindMouseLeave();
-		
-
-		// function addPinBtn(ele) {
-		// 	if($("span[data-pin-log]").length > 0 || $("a[data-pin-do").length>0) {
-		// 		$("span[data-pin-log]").remove();
-		// 		$("a[data-pin-do]").remove();
-		// 	}
-
-		// 	var pinBtnHtml = 
-		// 		"<a data-pin-do='buttonPin' href='https://www.pinterest.com/pin/create/button/"
-		// 		+ "?url=" + encodeURIComponent(window.location.href)
-		// 		+ "&media=" + ele.attr('src') 
-		// 		+ "&description=" + encodeURIComponent(ele.attr('alt'))
-		// 		+ "'></a>";
-
-		// 	$("body").append(pinBtnHtml);
-		// }
 	</script>
 </body>
 </html>
