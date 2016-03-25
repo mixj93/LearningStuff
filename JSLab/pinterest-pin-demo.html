@@ -80,7 +80,7 @@
 						$("span.pin-button").hide();
 					} else {
 						_btnThis = $(this);
-						$(".pin-button").click(function () {
+						$(".pin-button").off("click").click(function () {
 							PinUtils.pinOne({ 
 							   'url': window.location.href, 
 							   'media': _btnThis.attr("src"),
