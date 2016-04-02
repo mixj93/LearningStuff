@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<style>
+			.box-item {margin: 100px; border: 1px solid #d8d8d8; float: left; list-style: none; position: relative;}
+			.box {width: 180px; height: 80px; position: relative;}
+			.box:after {content: "自定义"; position: absolute; height: 0px; width: 48px;border-bottom: 20px solid #EFD423; border-left: 20px solid transparent; border-right: 20px solid transparent; line-height: 20px; font-size: 12px; color: #fff; text-align: center; top: 8px; right: -27px; z-index: 10; transform:rotate(45deg); -ms-transform:rotate(45deg); -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg); -o-transform:rotate(45deg);}
+			.box-item:before, .box-item:after {content: ""; position: absolute; background-color: #DAC221;}
+			.box-item:before { width: 28px; height: 5px; right: 27px; top: -6px;}
+			.box-item:after { width: 5px; height: 28px; right: -6px; top: 28px;}
+		</style>
+	</head>
+	<body>
+		<li class="box-item">
+			<div class="box">
+				
+			</div>
+		</li>	
+	</body>
+</html>
